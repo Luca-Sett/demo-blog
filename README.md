@@ -7,4 +7,4 @@ This is a demo blog app purely for the purposes of learning Next 13.
 - Next 13
 - TypeScript
 - Tailwind CSS
-- Strapi for content hosting
+- Sanity
