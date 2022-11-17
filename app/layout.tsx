@@ -10,15 +10,20 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Luca's Blog</title>
+        <title>Next 13 Blog</title>
       </head>
 
-      <body className="bg-gray-900 text-gray-100">
-        <header className="px-12 py-6 bg-gray-800 flex items-center justify-between">
-          <h1 className="text-4xl font-semibold">Demo Next.js Blog</h1>
+      <body className="text-zinc-900 bg-zinc-50">
+        <header className=" bg-zinc-900 text-zinc-50 fixed w-full">
+          <nav className="max-w-4xl mx-auto px-10 py-6 flex items-center justify-between">
+            <h1 className="text-3xl font-semibold">Next 13 Blog</h1>
+            <Link href="/" className="font-medium">
+              Home
+            </Link>
+          </nav>
         </header>
 
-        <main className="px-12 py-6">{children}</main>
+        <main className="max-w-4xl mx-auto px-10 pt-36 pb-20">{children}</main>
       </body>
     </html>
   );
