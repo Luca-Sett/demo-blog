@@ -56,7 +56,7 @@ async function getArticle(articleSlug: string) {
 
 export async function generateStaticParams() {
   const articles: { slug: string }[] = await sanity.fetch(
-    `*[_type == "blog"]{"slug": slug.current}`
+    `*[_type == "article"]{"slug": slug.current}`
   );
 
   return articles.map((article) => ({ articleSlug: article.slug }));
