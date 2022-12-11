@@ -1,5 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  *:focus-visible {
+    @apply bg-neo2 outline-none transition-colors;
+  }
+
+  ::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply border-solid border-2 border-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply border-solid border-2 border-black bg-neo;
+  }
+}

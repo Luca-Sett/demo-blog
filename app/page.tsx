@@ -1,4 +1,4 @@
-import ArticleCard from "./articleCard";
+import ArticleCard2 from "./articleCard";
 import { SanityArticle } from "../lib/articles";
 import { useSanity } from "../lib/useSanity";
 
@@ -7,21 +7,22 @@ export default async function ArticlesPage() {
 
   return (
     <>
-      <h2 className="text-3xl font-medium">Home</h2>
+      <div className="border-2 border-black rounded-lg shadow-brutal p-5 bg-neo">
+        <h2 className="text-3xl font-bold">Articles</h2>
+        <p className="text-lg pt-2">
+          Welcome to my blog! Select an article below to read it.
+        </p>
+      </div>
 
-      <p className="text-lg">
-        Welcome to my blog! Select an article below to read it.
-      </p>
-
-      <div className="py-10">
+      <div className="pt-10">
         {!articles ? (
           <div>
             We ran into an error fetching the articles. Try refreshing the page.
           </div>
         ) : (
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
             {articles.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
+              <ArticleCard2 key={article.slug} article={article} />
             ))}
           </div>
         )}

@@ -22,9 +22,11 @@ export default async function ArticlePage({
     </article>
   ) : (
     <article>
-      <h2 className="text-3xl font-semibold">{article.title}</h2>
-      <p className="text-lg">{article.summary}</p>
-      <p className="uppercase font-bold text-zinc-400">By: {article.author}</p>
+      <div className="border-2 border-black rounded-lg shadow-brutal p-5 bg-neo">
+        <h2 className="text-3xl font-bold">{article.title}</h2>
+        <p className="text-lg py-2">{article.summary}</p>
+        <p>By {article.author}</p>
+      </div>
 
       <Image
         src={`https://picsum.photos/seed/${article.slug}/816/459`}
@@ -32,7 +34,7 @@ export default async function ArticlePage({
         width={816}
         height={459}
         priority
-        className="rounded-lg my-8"
+        className="rounded-md border-2 border-black my-8"
       />
 
       <div className="max-w-none prose prose-zinc">

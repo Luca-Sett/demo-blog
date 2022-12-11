@@ -6,26 +6,25 @@ export default function ArticleCard({ article }: { article: SanityArticle }) {
   return (
     <Link
       href={`/articles/${article.slug}`}
-      className="group grid rounded-md overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 transform-gpu"
+      className="flex flex-col rounded-lg border-2 border-black shadow-brutal overflow-hidden p-5 hover:bg-neo2 transition-colors"
     >
       <Image
         src={`https://picsum.photos/seed/${article.slug}/624/351`}
         alt="article image"
         width={624}
         height={351}
-        className="relative z-0 w-full aspect-video row-start-1 col-start-1 group-hover:scale-110 transition-transform duration-500 transform-gpu"
+        className="rounded-md border-2 border-black"
       />
 
-      <div className="relative z-10 row-start-1 col-start-1 from-transparent to-black/90 bg-gradient-to-b text-zinc-50 flex flex-col justify-end p-4 translate-y-9 group-hover:translate-y-0 transition-transform duration-500">
-        <div className="line-clamp-1 text-xl font-semibold">
-          {article.title}
+      <div className="h-full flex flex-col justify-between">
+        <div>
+          <div className="font-bold text-xl pt-4">{article.title}</div>
+          <div className="py-3">{article.summary}</div>
         </div>
 
-        <div className="line-clamp-2">{article.summary}</div>
-
-        <div className="uppercase font-semibold text-zinc-300 flex justify-between mt-2">
-          <div>By: {article.author}</div>
-          <div>{new Date(article._createdAt).toDateString()}</div>
+        <div className="flex justify-between">
+          <div>{article.author}</div>
+          <div>{new Date(article._createdAt).toLocaleDateString()}</div>
         </div>
       </div>
     </Link>

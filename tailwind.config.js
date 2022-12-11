@@ -3,7 +3,16 @@ module.exports = {
   content: ["./app/**/*.tsx", "./components/**/*.tsx"],
   theme: {
     fontFamily: {
-      sans: ["Poppins", "sans-serif"],
+      sans: ["Space Mono", "sans-serif"],
+    },
+    extend: {
+      boxShadow: {
+        brutal: "4px 4px 0 0 black",
+      },
+      colors: {
+        neo: "#fcd436",
+        neo2: "#91D99C",
+      },
     },
   },
   plugins: [
