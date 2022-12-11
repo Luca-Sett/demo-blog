@@ -1,9 +1,15 @@
+import Head from "next/head";
 import { NextStudio } from "next-sanity/studio";
-import { defineConfig } from "sanity";
+import { NextStudioHead } from "next-sanity/studio/head";
 import { config } from "../../lib/sanity.config";
 
-const studioConfig = defineConfig(config);
-
-export default function Studio() {
-  return <NextStudio config={studioConfig} />;
+export default function StudioPage() {
+  return (
+    <>
+      <Head>
+        <NextStudioHead />
+      </Head>
+      <NextStudio config={config} />
+    </>
+  );
 }
