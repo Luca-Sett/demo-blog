@@ -10,7 +10,6 @@ export default function RootLayout({
     <html lang="en" className="scroll-p-36 scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Next 13 Blog</title>
       </head>
 
       <body className="text-black bg-white">

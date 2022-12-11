@@ -5,11 +5,11 @@ import { useSanity } from "../../../lib/useSanity";
 import { SanityArticle } from "../../../lib/articles";
 
 export default async function ArticlePage({
-  params: { articleSlug },
+  params,
 }: {
   params: { articleSlug: string };
 }) {
-  const article = await getArticle(articleSlug);
+  const article = await getArticle(params.articleSlug);
 
   return !article ? (
     <article>
