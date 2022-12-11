@@ -29,7 +29,7 @@ export default function RootLayout({
         </header>
 
         <main className="max-w-4xl mx-auto sm:px-10">
-          <div className="px-5 sm:px-10 pt-36 pb-16 sm:border-x-2 border-black">
+          <div className="px-5 sm:px-10 pt-36 pb-16 min-h-[calc(100vh-68px)] sm:border-x-2 border-black">
             {children}
           </div>
         </main>

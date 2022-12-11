@@ -21,8 +21,12 @@ export default async function ArticlesPage() {
           </div>
         ) : (
           <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
-            {articles.map((article) => (
-              <ArticleCard2 key={article.slug} article={article} />
+            {articles.map((article, index) => (
+              <ArticleCard2
+                key={article.slug}
+                article={article}
+                priority={index < 2}
+              />
             ))}
           </div>
         )}

@@ -13,12 +13,20 @@ export default async function ArticlePage({
 
   return !article ? (
     <article>
-      <h2 className="text-3xl font-medium">
-        Sorry, we can't find this article.
-      </h2>
-      <p className="text-lg">
-        Go back <Link href="/">home</Link>
-      </p>
+      <div className="border-2 border-black rounded-lg shadow-brutal p-5 bg-neo">
+        <h2 className="text-3xl font-bold">
+          Sorry, we can't find this article.
+        </h2>
+      </div>
+
+      <div className="flex justify-center pt-8">
+        <Link
+          href="/"
+          className="font-bold text-lg bg-neo3 hover:bg-neo2 transition-colors px-3 py-2 rounded-lg border-2 border-black shadow-brutal"
+        >
+          Go Back Home
+        </Link>
+      </div>
     </article>
   ) : (
     <article>

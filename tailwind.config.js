@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         neo: "#fcd436",
         neo2: "#91D99C",
+        neo3: "#fe747b",
       },
     },
   },

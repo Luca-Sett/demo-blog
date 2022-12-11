@@ -2,7 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { SanityArticle } from "../lib/articles";
 
-export default function ArticleCard({ article }: { article: SanityArticle }) {
+export default function ArticleCard({
+  article,
+  priority,
+}: {
+  article: SanityArticle;
+  priority: boolean;
+}) {
   return (
     <Link
       href={`/articles/${article.slug}`}
@@ -13,6 +19,7 @@ export default function ArticleCard({ article }: { article: SanityArticle }) {
         alt="article image"
         width={624}
         height={351}
+        priority={priority}
         className="rounded-md border-2 border-black"
       />
 
